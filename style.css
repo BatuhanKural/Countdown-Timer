@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh; 
+    background: linear-gradient(135deg, #000, #000000fd);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+#timer {
+    color: #fff;
+    font-size: 9rem;
+}
+
+#timer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+}
+
+.btn {
+    padding: 20px 50px;
+    border-radius: 50px;
+    background-color: #1d1d1d;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #3d3d3dea;
+}
+
+#timer-settings {
+    visibility: hidden;
+    margin-top: 50px;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+#timer-settings.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+#timer-settings h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+#timer-settings h4 {
+    color: #fff;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+
+#timer-settings input {
+    -webkit-appearance: none;
+    margin-top: 20px;
+    display: block;
+    width: 700px;
+    background: #3d3d3d;
+    height: 8px;
+    border-radius: 5px;
+    outline: none;
+}
+
+#start-btn {
+    display: block;
+    text-align: center;
+    margin: 25px auto;
+}
+
+.btns {
+    display: flex;
+    column-gap: 20px;
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    #timer {
+        font-size: 6rem;
+    }
+
+    #timer-settings h2 {
+        font-size: 1.2rem;
+    }
+
+    #timer-settings h4 {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 15px 30px;
+        font-size: 0.9rem;
+    }
+
+    .btns {
+        flex-direction: column;
+        row-gap: 15px;
+    }
+
+    #timer-settings input {
+        max-width: 450px;
+        min-width: 450px;
+        width: 450px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    #timer {
+        font-size: 4rem;
+    }
+
+    #timer-settings h2 {
+        font-size: 1rem;
+    }
+
+    #timer-settings h4 {
+        font-size: 0.7rem;
+    }
+
+
+    .btn {
+        padding: 10px 25px;
+        font-size: 0.8rem;
+    }
+    #timer-settings input {
+        max-width: 310px;
+        min-width: 310px;
+        width: 310px;
+    }
+}

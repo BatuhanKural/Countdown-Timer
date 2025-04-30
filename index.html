@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <title>Countdown Timer</title>
+</head>
+<body>
+    <main>
+        <audio src="alarm.mp3" id="alarm-sound" preload="auto"></audio>
+        <section id="timer-content">
+            <h2 id="timer"><span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span></h2>
+            <div class="btns">
+                <button class="btn" id="set-btn">Set Timer</button>
+                <button class="btn" id="reset-btn">Reset Timer</button>
+            </div>
+        </section>
+        <section id="timer-settings">
+            <h2>Configure your session</h2>
+            <h4>Duration <span id="duration-val"></span></h4>
+            <input type="range" min="1" max="120" step="1">
+            <button class="btn" id="start-btn">Start</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
